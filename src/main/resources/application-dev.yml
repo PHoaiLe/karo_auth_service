@@ -1,0 +1,15 @@
+
+server:
+  port: ${SERVER_PORT}
+
+spring:
+  profile:
+    active: dev
+  config:
+    import: optional:../../envs/development.env[.properties]
+  application:
+    name: ${APP_NAME}
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
