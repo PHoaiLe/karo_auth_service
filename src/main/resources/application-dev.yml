@@ -2,6 +2,13 @@
 server:
   port: ${SERVER_PORT}
 
+jwt:
+  secret:
+    token_id_prefix: ${JWT_TOKEN_ID_PREFIX}
+    access_token: ${JWT_ACCESS_TOKEN_SECRET}
+    refresh_token: ${JWT_REFRESH_TOKEN_SECRET}
+    refresh_token_expired_interval: ${JWT_REFRESH_TOKEN_EXPIRED_INTERVAL}
+
 spring:
   profile:
     active: dev
@@ -9,6 +16,7 @@ spring:
     import: optional:../../envs/development.env[.properties]
   application:
     name: ${APP_NAME}
+
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}

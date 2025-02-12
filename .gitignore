@@ -37,4 +37,4 @@ envs/
 src/main/resources/env
 
 ### certificates
-db_cert
+db_cert/
